@@ -10,9 +10,19 @@ module.exports = {
     return pictures;
   },
 
-  async serviceGetFile(name) {
-    const file = res.sendFile(path.join(__dirname, "../../uploads/offers/" + name));
-    return file;
+  async serviceGetFile(name, res) {
+    console.log("SERVICE GETFILE");
+    await res.sendFile(
+      path.join(__dirname, "../../uploads/offers/" + name),
+      (err) => {
+        if (err) {
+          console.log("ERROR");
+        } else {
+          console.log("OK");
+        }
+      }
+    );
+    // return file;
   },
 
   async serviceCreatePicture(offerId, image) {

@@ -22,19 +22,22 @@ module.exports = {
 
   async getFile(req, res) {
     const { name } = req.params;
-    if (name) {
-      const response = await PictureOfferService.serviceGetFile(name);
-      if (!response) {
-        return res
-          .status(500)
-          .json({ message: "Some error occurred while creating the picture." });
-      }
-      return res.status(201).json(response);
-    } else {
-      return res
-        .status(400)
-        .json({ message: "name can not be null or undefined" });
-    }
+    await PictureOfferService.serviceGetFile(name, res).then((result) => {
+      console.log(result);
+    });
+    // if (name) {
+    //   const response = await PictureOfferService.serviceGetFile(name, res);
+    //   if (!response) {
+    //     return res
+    //       .status(500)
+    //       .json({ message: "Some error occurred while creating the picture." });
+    //   }
+    //   return res.status(201).json(response);
+    // } else {
+    //   return res
+    //     .status(400)
+    //     .json({ message: "name can not be null or undefined" });
+    // }
   },
 
   async createPicture(req, res) {

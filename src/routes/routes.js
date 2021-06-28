@@ -4,10 +4,14 @@ const offerRoutes = require("./offerRoutes");
 const userWantOffersRoutes = require("./userWantOffersRoutes");
 const pictureOfferRoutes = require("./pictureOfferRoutes");
 const categoryRoutes = require("./categoryRoutes");
-const AuthRouter = require('./AuthRoutes');
-const { verifyAccessToken } = require('../utils/jwt.utils');
+const AuthRouter = require("./AuthRoutes");
+const { verifyAccessToken } = require("../utils/jwt.utils");
 
 const router = express.Router();
+
+router.use("/", (req, res) => {
+  return res.json("Hello world ! Have fun with our API");
+});
 
 /* routes User */
 router.use("/auth", AuthRouter);
