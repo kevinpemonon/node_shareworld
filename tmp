@@ -1,0 +1,6 @@
+PORT=3333
+DB_HOST=127.0.0.1
+DB_NAME=shareworld
+DB_USERNAME=postgres
+DB_PASSWORD=pempem
+DB_DIALECT=postgres
