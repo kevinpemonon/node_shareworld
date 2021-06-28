@@ -9,7 +9,7 @@ const { verifyAccessToken } = require("../utils/jwt.utils");
 
 const router = express.Router();
 
-router.use("/", (req, res) => {
+router.get("/", (req, res) => {
   return res.json("Hello world ! Have fun with our API");
 });
 
