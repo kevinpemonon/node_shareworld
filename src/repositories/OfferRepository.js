@@ -10,10 +10,20 @@ const sequelize = new Sequelize(
   }
 );
 
-const mySequelize = new Sequelize("shareworld", "postgres", "pempem", {
-  host: "localhost",
-  dialect: "postgres",
-});
+// const mySequelize = new Sequelize("shareworld", "postgres", "pempem", {
+//   host: "localhost",
+//   dialect: "postgres",
+// });
+
+const mySequelize = new Sequelize(
+  "d8m8rdeggo2ubm",
+  "ezsmotomzrgqnw",
+  "46c1b6ef0569d4c107c4831a2004379416537b5148be5cb48c97feb6790bc21a",
+  {
+    host: "ec2-79-125-30-28.eu-west-1.compute.amazonaws.com",
+    dialect: "postgres",
+  }
+);
 
 module.exports = {
   /**
