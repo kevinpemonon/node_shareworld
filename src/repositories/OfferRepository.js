@@ -15,32 +15,12 @@ const sequelize = new Sequelize(
 //   dialect: "postgres",
 // });
 
-// const mySequelize = new Sequelize(
-//   process.env.DB_NAME,
-//   process.env.DB_USERNAME,
-//   process.env.DB_PASSWORD,
-//   {
-//     host: process.env.DB_HOST,
-//     dialect: "postgres",
-//     ssl: true,
-//   }
-// );
-
-// const mySequelize = new Sequelize(process.env.DATABASE_URL, {
-//   dialectOptions: {
-//     ssl: {
-//       require: true,
-//       rejectUnauthorized: false,
-//     },
-//   },
-// });
-
 const mySequelize = new Sequelize(
-  "d1frheou9mvs3a",
-  "ljsfdlpndvyaou",
-  "b3e5fa2084cdd84b110b5e4476066d2ab5aa3aca83e881a22bc04f6ece0bf4df",
+  process.env.DB_NAME,
+  process.env.DB_USERNAME,
+  process.env.DB_PASSWORD,
   {
-    host: "ec2-108-128-104-50.eu-west-1.compute.amazonaws.com",
+    host: process.env.DB_HOST,
     dialect: "postgres",
     protocol: "postgres",
     dialectOptions: {
@@ -51,6 +31,32 @@ const mySequelize = new Sequelize(
     },
   }
 );
+
+// const mySequelize = new Sequelize(process.env.DATABASE_URL, {
+//   dialectOptions: {
+//     ssl: {
+//       require: true,
+//       rejectUnauthorized: false,
+//     },
+//   },
+// });
+
+// const mySequelize = new Sequelize(
+//   "d1frheou9mvs3a",
+//   "ljsfdlpndvyaou",
+//   "b3e5fa2084cdd84b110b5e4476066d2ab5aa3aca83e881a22bc04f6ece0bf4df",
+//   {
+//     host: "ec2-108-128-104-50.eu-west-1.compute.amazonaws.com",
+//     dialect: "postgres",
+//     protocol: "postgres",
+//     dialectOptions: {
+//       ssl: {
+//         require: true,
+//         rejectUnauthorized: false,
+//       },
+//     },
+//   }
+// );
 
 module.exports = {
   /**

@@ -370,6 +370,11 @@ COPY public."SequelizeMeta" (name) FROM stdin;
 --
 
 COPY public.addresses (id, street, city, zipcode, complement, number, latitude, longitude, created_at, updated_at) FROM stdin;
+1	Rue Condorcet	Villejuif	94800		5	48.79830169678	2.36831855774	2021-10-03 02:00:00+02	2021-10-03 02:00:00+02
+2	Rue du moulin de la pointe	Paris	75013	Batiment A	38	48.82277679443	2.35656380653	2021-10-03 02:00:00+02	2021-10-03 02:00:00+02
+3	Rue des Archives	Paris	75004		43	48.86013486502	2.35690712929	2021-10-03 02:00:00+02	2021-10-03 02:00:00+02
+4	Rue Auguste Dorchain	Paris	75015		1	48.84501799151	2.29785561562	2021-10-03 02:00:00+02	2021-10-03 02:00:00+02
+5	Rue Oberkampf	Paris	75011		62	48.86694819925	2.38265633583	2021-10-03 02:00:00+02	2021-10-03 02:00:00+02
 \.
 
 
@@ -378,6 +383,15 @@ COPY public.addresses (id, street, city, zipcode, complement, number, latitude, 
 --
 
 COPY public.categories (id, label, created_at, updated_at, image_url) FROM stdin;
+1	Autre	2021-10-03 02:00:00+02	2021-10-03 02:00:00+02	\N
+2	DVD et Blu-Ray	2021-10-03 02:00:00+02	2021-10-03 02:00:00+02	\N
+3	Informatique	2021-10-03 02:00:00+02	2021-10-03 02:00:00+02	\N
+4	Jeux-vidéo	2021-10-03 02:00:00+02	2021-10-03 02:00:00+02	\N
+5	Jouets	2021-10-03 02:00:00+02	2021-10-03 02:00:00+02	\N
+6	Meubles	2021-10-03 02:00:00+02	2021-10-03 02:00:00+02	\N
+7	Musique	2021-10-03 02:00:00+02	2021-10-03 02:00:00+02	\N
+8	Sports et loisirs	2021-10-03 02:00:00+02	2021-10-03 02:00:00+02	\N
+9	Vêtements et chaussures	2021-10-03 02:00:00+02	2021-10-03 02:00:00+02	\N
 \.
 
 
@@ -386,6 +400,13 @@ COPY public.categories (id, label, created_at, updated_at, image_url) FROM stdin
 --
 
 COPY public.offers (id, label, description, display_phone, display_mail, state, status, owner_id, exchange_address_id, category_id, created_at, updated_at, is_owner_address) FROM stdin;
+1	Guitare Folk	Il manque les cordes	t	t	Bon état	En cours(ouverte)	1	1	7	2021-03-10 01:00:00+01	2021-03-10 01:00:00+01	t
+2	Guitare Acoustique		t	f	À bricoler	Donné(fermée)	1	5	7	2021-03-10 01:00:00+01	2021-03-10 01:00:00+01	f
+3	Ballon de football		t	f	Comme neuf	En cours(ouverte)	1	1	8	2021-03-10 01:00:00+01	2021-03-10 01:00:00+01	t
+4	Chaussures de randonnées		f	f	État Moyen	En cours(ouverte)	2	2	9	2021-03-10 01:00:00+01	2021-03-10 01:00:00+01	t
+5	Souris d'ordinateur		t	t	État Moyen	En cours(ouverte)	2	2	3	2021-03-10 01:00:00+01	2021-03-10 01:00:00+01	t
+6	DVD		t	t	Bon état	En cours(ouverte)	3	3	2	2021-03-10 01:00:00+01	2021-03-10 01:00:00+01	t
+7	Pantalon en lin	Taille 40	t	t	État Moyen	En cours(ouverte)	3	4	9	2021-03-10 01:00:00+01	2021-03-10 01:00:00+01	f
 \.
 
 
@@ -394,6 +415,9 @@ COPY public.offers (id, label, description, display_phone, display_mail, state, 
 --
 
 COPY public.pictures_offer (id, name, url, offer_id, created_at, updated_at) FROM stdin;
+1	guitare1	offers/guitare1.jpg	1	2021-03-10 01:00:00+01	2021-03-10 01:00:00+01
+2	guitare2	offers/guitare2.jpg	1	2021-03-10 01:00:00+01	2021-03-10 01:00:00+01
+3	guitare3	offers/guitare3.jpg	2	2021-03-10 01:00:00+01	2021-03-10 01:00:00+01
 \.
 
 
@@ -402,6 +426,9 @@ COPY public.pictures_offer (id, name, url, offer_id, created_at, updated_at) FRO
 --
 
 COPY public.user_has_favorites (user_id, offer_id, created_at, updated_at) FROM stdin;
+1	5	2021-10-03 02:00:00+02	2021-10-03 02:00:00+02
+2	1	2021-10-03 02:00:00+02	2021-10-03 02:00:00+02
+2	2	2021-10-03 02:00:00+02	2021-10-03 02:00:00+02
 \.
 
 
@@ -410,6 +437,11 @@ COPY public.user_has_favorites (user_id, offer_id, created_at, updated_at) FROM 
 --
 
 COPY public.user_want_offers (user_id, offer_id, validate_by_owner, validate_by_aquirer, created_at, updated_at) FROM stdin;
+2	1	f	f	2021-10-03 02:00:00+02	2021-10-03 02:00:00+02
+3	1	t	f	2021-10-03 02:00:00+02	2021-10-03 02:00:00+02
+2	2	f	f	2021-10-03 02:00:00+02	2021-10-03 02:00:00+02
+3	2	f	f	2021-10-03 02:00:00+02	2021-10-03 02:00:00+02
+3	3	f	f	2021-10-03 02:00:00+02	2021-10-03 02:00:00+02
 \.
 
 
@@ -418,6 +450,9 @@ COPY public.user_want_offers (user_id, offer_id, validate_by_owner, validate_by_
 --
 
 COPY public.users (id, first_name, last_name, phone, url_avatar, credit, mail, password_hash, status, note, number_notes, created_at, updated_at, address_id) FROM stdin;
+1	John	Lennon	0645983236		10	john.lennon@gmail.com	rfhqozhfoqzehfoZFE	active	4.7	11	2021-10-03 02:00:00+02	2021-10-03 02:00:00+02	1
+2	Mathias	Dugamin	0725285454		50	mathias.dugamin@gmail.com	rfhqozhfoqzehfoZFE	banned	2.1	25	2021-10-03 02:00:00+02	2021-10-03 02:00:00+02	2
+3	Bob	Marley	0645983236		2	bob.marley@gmail.com	rfhqozhfoqzehfoZFE	active	4.9	56	2021-10-03 02:00:00+02	2021-10-03 02:00:00+02	3
 \.
 
 
@@ -425,35 +460,35 @@ COPY public.users (id, first_name, last_name, phone, url_avatar, credit, mail, p
 -- Name: addresses_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.addresses_id_seq', 1, false);
+SELECT pg_catalog.setval('public.addresses_id_seq', 5, true);
 
 
 --
 -- Name: categories_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.categories_id_seq', 1, false);
+SELECT pg_catalog.setval('public.categories_id_seq', 9, true);
 
 
 --
 -- Name: offers_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.offers_id_seq', 1, false);
+SELECT pg_catalog.setval('public.offers_id_seq', 7, true);
 
 
 --
 -- Name: pictures_offer_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.pictures_offer_id_seq', 1, false);
+SELECT pg_catalog.setval('public.pictures_offer_id_seq', 3, true);
 
 
 --
 -- Name: users_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.users_id_seq', 1, false);
+SELECT pg_catalog.setval('public.users_id_seq', 3, true);
 
 
 --
