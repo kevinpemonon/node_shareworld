@@ -250,6 +250,7 @@ module.exports = {
   },
 
   async repositoryGetOffersCreatedByUser(userId) {
+    console.log("repositoryGetOffersCreatedByUser");
     const offersCreatedByUser = [];
     const offers = await mySequelize.query(
       "SELECT * FROM offers WHERE owner_id = $id ORDER BY id",

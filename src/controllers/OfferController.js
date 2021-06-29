@@ -199,6 +199,7 @@ module.exports = {
   },
 
   async getOffersCreatedByUser(req, res) {
+    console.log('getOffersCreatedByUser');
     const { userId } = req.params;
     if (!userId) {
       let error = "UserId can not be null";
