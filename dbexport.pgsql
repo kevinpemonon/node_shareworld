@@ -17,7 +17,7 @@ SET client_min_messages = warning;
 SET row_security = off;
 
 --
--- Name: enum_offers_state; Type: TYPE; Schema: public; Owner: elyrsjaurycqki
+-- Name: enum_offers_state; Type: TYPE; Schema: public; Owner: kpkbeykbmtyrom
 --
 
 CREATE TYPE public.enum_offers_state AS ENUM (
@@ -28,10 +28,10 @@ CREATE TYPE public.enum_offers_state AS ENUM (
 );
 
 
-ALTER TYPE public.enum_offers_state OWNER TO elyrsjaurycqki;
+ALTER TYPE public.enum_offers_state OWNER TO kpkbeykbmtyrom;
 
 --
--- Name: enum_offers_status; Type: TYPE; Schema: public; Owner: elyrsjaurycqki
+-- Name: enum_offers_status; Type: TYPE; Schema: public; Owner: kpkbeykbmtyrom
 --
 
 CREATE TYPE public.enum_offers_status AS ENUM (
@@ -41,10 +41,10 @@ CREATE TYPE public.enum_offers_status AS ENUM (
 );
 
 
-ALTER TYPE public.enum_offers_status OWNER TO elyrsjaurycqki;
+ALTER TYPE public.enum_offers_status OWNER TO kpkbeykbmtyrom;
 
 --
--- Name: enum_users_status; Type: TYPE; Schema: public; Owner: elyrsjaurycqki
+-- Name: enum_users_status; Type: TYPE; Schema: public; Owner: kpkbeykbmtyrom
 --
 
 CREATE TYPE public.enum_users_status AS ENUM (
@@ -54,14 +54,14 @@ CREATE TYPE public.enum_users_status AS ENUM (
 );
 
 
-ALTER TYPE public.enum_users_status OWNER TO elyrsjaurycqki;
+ALTER TYPE public.enum_users_status OWNER TO kpkbeykbmtyrom;
 
 SET default_tablespace = '';
 
 SET default_table_access_method = heap;
 
 --
--- Name: SequelizeMeta; Type: TABLE; Schema: public; Owner: elyrsjaurycqki
+-- Name: SequelizeMeta; Type: TABLE; Schema: public; Owner: kpkbeykbmtyrom
 --
 
 CREATE TABLE public."SequelizeMeta" (
@@ -69,10 +69,10 @@ CREATE TABLE public."SequelizeMeta" (
 );
 
 
-ALTER TABLE public."SequelizeMeta" OWNER TO elyrsjaurycqki;
+ALTER TABLE public."SequelizeMeta" OWNER TO kpkbeykbmtyrom;
 
 --
--- Name: addresses; Type: TABLE; Schema: public; Owner: elyrsjaurycqki
+-- Name: addresses; Type: TABLE; Schema: public; Owner: kpkbeykbmtyrom
 --
 
 CREATE TABLE public.addresses (
@@ -89,10 +89,10 @@ CREATE TABLE public.addresses (
 );
 
 
-ALTER TABLE public.addresses OWNER TO elyrsjaurycqki;
+ALTER TABLE public.addresses OWNER TO kpkbeykbmtyrom;
 
 --
--- Name: addresses_id_seq; Type: SEQUENCE; Schema: public; Owner: elyrsjaurycqki
+-- Name: addresses_id_seq; Type: SEQUENCE; Schema: public; Owner: kpkbeykbmtyrom
 --
 
 CREATE SEQUENCE public.addresses_id_seq
@@ -104,17 +104,17 @@ CREATE SEQUENCE public.addresses_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.addresses_id_seq OWNER TO elyrsjaurycqki;
+ALTER TABLE public.addresses_id_seq OWNER TO kpkbeykbmtyrom;
 
 --
--- Name: addresses_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: elyrsjaurycqki
+-- Name: addresses_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: kpkbeykbmtyrom
 --
 
 ALTER SEQUENCE public.addresses_id_seq OWNED BY public.addresses.id;
 
 
 --
--- Name: categories; Type: TABLE; Schema: public; Owner: elyrsjaurycqki
+-- Name: categories; Type: TABLE; Schema: public; Owner: kpkbeykbmtyrom
 --
 
 CREATE TABLE public.categories (
@@ -126,10 +126,10 @@ CREATE TABLE public.categories (
 );
 
 
-ALTER TABLE public.categories OWNER TO elyrsjaurycqki;
+ALTER TABLE public.categories OWNER TO kpkbeykbmtyrom;
 
 --
--- Name: categories_id_seq; Type: SEQUENCE; Schema: public; Owner: elyrsjaurycqki
+-- Name: categories_id_seq; Type: SEQUENCE; Schema: public; Owner: kpkbeykbmtyrom
 --
 
 CREATE SEQUENCE public.categories_id_seq
@@ -141,17 +141,17 @@ CREATE SEQUENCE public.categories_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.categories_id_seq OWNER TO elyrsjaurycqki;
+ALTER TABLE public.categories_id_seq OWNER TO kpkbeykbmtyrom;
 
 --
--- Name: categories_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: elyrsjaurycqki
+-- Name: categories_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: kpkbeykbmtyrom
 --
 
 ALTER SEQUENCE public.categories_id_seq OWNED BY public.categories.id;
 
 
 --
--- Name: offers; Type: TABLE; Schema: public; Owner: elyrsjaurycqki
+-- Name: offers; Type: TABLE; Schema: public; Owner: kpkbeykbmtyrom
 --
 
 CREATE TABLE public.offers (
@@ -171,10 +171,10 @@ CREATE TABLE public.offers (
 );
 
 
-ALTER TABLE public.offers OWNER TO elyrsjaurycqki;
+ALTER TABLE public.offers OWNER TO kpkbeykbmtyrom;
 
 --
--- Name: offers_id_seq; Type: SEQUENCE; Schema: public; Owner: elyrsjaurycqki
+-- Name: offers_id_seq; Type: SEQUENCE; Schema: public; Owner: kpkbeykbmtyrom
 --
 
 CREATE SEQUENCE public.offers_id_seq
@@ -186,17 +186,17 @@ CREATE SEQUENCE public.offers_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.offers_id_seq OWNER TO elyrsjaurycqki;
+ALTER TABLE public.offers_id_seq OWNER TO kpkbeykbmtyrom;
 
 --
--- Name: offers_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: elyrsjaurycqki
+-- Name: offers_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: kpkbeykbmtyrom
 --
 
 ALTER SEQUENCE public.offers_id_seq OWNED BY public.offers.id;
 
 
 --
--- Name: pictures_offer; Type: TABLE; Schema: public; Owner: elyrsjaurycqki
+-- Name: pictures_offer; Type: TABLE; Schema: public; Owner: kpkbeykbmtyrom
 --
 
 CREATE TABLE public.pictures_offer (
@@ -209,10 +209,10 @@ CREATE TABLE public.pictures_offer (
 );
 
 
-ALTER TABLE public.pictures_offer OWNER TO elyrsjaurycqki;
+ALTER TABLE public.pictures_offer OWNER TO kpkbeykbmtyrom;
 
 --
--- Name: pictures_offer_id_seq; Type: SEQUENCE; Schema: public; Owner: elyrsjaurycqki
+-- Name: pictures_offer_id_seq; Type: SEQUENCE; Schema: public; Owner: kpkbeykbmtyrom
 --
 
 CREATE SEQUENCE public.pictures_offer_id_seq
@@ -224,17 +224,17 @@ CREATE SEQUENCE public.pictures_offer_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.pictures_offer_id_seq OWNER TO elyrsjaurycqki;
+ALTER TABLE public.pictures_offer_id_seq OWNER TO kpkbeykbmtyrom;
 
 --
--- Name: pictures_offer_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: elyrsjaurycqki
+-- Name: pictures_offer_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: kpkbeykbmtyrom
 --
 
 ALTER SEQUENCE public.pictures_offer_id_seq OWNED BY public.pictures_offer.id;
 
 
 --
--- Name: user_has_favorites; Type: TABLE; Schema: public; Owner: elyrsjaurycqki
+-- Name: user_has_favorites; Type: TABLE; Schema: public; Owner: kpkbeykbmtyrom
 --
 
 CREATE TABLE public.user_has_favorites (
@@ -245,10 +245,10 @@ CREATE TABLE public.user_has_favorites (
 );
 
 
-ALTER TABLE public.user_has_favorites OWNER TO elyrsjaurycqki;
+ALTER TABLE public.user_has_favorites OWNER TO kpkbeykbmtyrom;
 
 --
--- Name: user_want_offers; Type: TABLE; Schema: public; Owner: elyrsjaurycqki
+-- Name: user_want_offers; Type: TABLE; Schema: public; Owner: kpkbeykbmtyrom
 --
 
 CREATE TABLE public.user_want_offers (
@@ -261,10 +261,10 @@ CREATE TABLE public.user_want_offers (
 );
 
 
-ALTER TABLE public.user_want_offers OWNER TO elyrsjaurycqki;
+ALTER TABLE public.user_want_offers OWNER TO kpkbeykbmtyrom;
 
 --
--- Name: users; Type: TABLE; Schema: public; Owner: elyrsjaurycqki
+-- Name: users; Type: TABLE; Schema: public; Owner: kpkbeykbmtyrom
 --
 
 CREATE TABLE public.users (
@@ -285,10 +285,10 @@ CREATE TABLE public.users (
 );
 
 
-ALTER TABLE public.users OWNER TO elyrsjaurycqki;
+ALTER TABLE public.users OWNER TO kpkbeykbmtyrom;
 
 --
--- Name: users_id_seq; Type: SEQUENCE; Schema: public; Owner: elyrsjaurycqki
+-- Name: users_id_seq; Type: SEQUENCE; Schema: public; Owner: kpkbeykbmtyrom
 --
 
 CREATE SEQUENCE public.users_id_seq
@@ -300,52 +300,52 @@ CREATE SEQUENCE public.users_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.users_id_seq OWNER TO elyrsjaurycqki;
+ALTER TABLE public.users_id_seq OWNER TO kpkbeykbmtyrom;
 
 --
--- Name: users_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: elyrsjaurycqki
+-- Name: users_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: kpkbeykbmtyrom
 --
 
 ALTER SEQUENCE public.users_id_seq OWNED BY public.users.id;
 
 
 --
--- Name: addresses id; Type: DEFAULT; Schema: public; Owner: elyrsjaurycqki
+-- Name: addresses id; Type: DEFAULT; Schema: public; Owner: kpkbeykbmtyrom
 --
 
 ALTER TABLE ONLY public.addresses ALTER COLUMN id SET DEFAULT nextval('public.addresses_id_seq'::regclass);
 
 
 --
--- Name: categories id; Type: DEFAULT; Schema: public; Owner: elyrsjaurycqki
+-- Name: categories id; Type: DEFAULT; Schema: public; Owner: kpkbeykbmtyrom
 --
 
 ALTER TABLE ONLY public.categories ALTER COLUMN id SET DEFAULT nextval('public.categories_id_seq'::regclass);
 
 
 --
--- Name: offers id; Type: DEFAULT; Schema: public; Owner: elyrsjaurycqki
+-- Name: offers id; Type: DEFAULT; Schema: public; Owner: kpkbeykbmtyrom
 --
 
 ALTER TABLE ONLY public.offers ALTER COLUMN id SET DEFAULT nextval('public.offers_id_seq'::regclass);
 
 
 --
--- Name: pictures_offer id; Type: DEFAULT; Schema: public; Owner: elyrsjaurycqki
+-- Name: pictures_offer id; Type: DEFAULT; Schema: public; Owner: kpkbeykbmtyrom
 --
 
 ALTER TABLE ONLY public.pictures_offer ALTER COLUMN id SET DEFAULT nextval('public.pictures_offer_id_seq'::regclass);
 
 
 --
--- Name: users id; Type: DEFAULT; Schema: public; Owner: elyrsjaurycqki
+-- Name: users id; Type: DEFAULT; Schema: public; Owner: kpkbeykbmtyrom
 --
 
 ALTER TABLE ONLY public.users ALTER COLUMN id SET DEFAULT nextval('public.users_id_seq'::regclass);
 
 
 --
--- Data for Name: SequelizeMeta; Type: TABLE DATA; Schema: public; Owner: elyrsjaurycqki
+-- Data for Name: SequelizeMeta; Type: TABLE DATA; Schema: public; Owner: kpkbeykbmtyrom
 --
 
 COPY public."SequelizeMeta" (name) FROM stdin;
@@ -366,7 +366,7 @@ COPY public."SequelizeMeta" (name) FROM stdin;
 
 
 --
--- Data for Name: addresses; Type: TABLE DATA; Schema: public; Owner: elyrsjaurycqki
+-- Data for Name: addresses; Type: TABLE DATA; Schema: public; Owner: kpkbeykbmtyrom
 --
 
 COPY public.addresses (id, street, city, zipcode, complement, number, latitude, longitude, created_at, updated_at) FROM stdin;
@@ -379,7 +379,7 @@ COPY public.addresses (id, street, city, zipcode, complement, number, latitude, 
 
 
 --
--- Data for Name: categories; Type: TABLE DATA; Schema: public; Owner: elyrsjaurycqki
+-- Data for Name: categories; Type: TABLE DATA; Schema: public; Owner: kpkbeykbmtyrom
 --
 
 COPY public.categories (id, label, created_at, updated_at, image_url) FROM stdin;
@@ -396,7 +396,7 @@ COPY public.categories (id, label, created_at, updated_at, image_url) FROM stdin
 
 
 --
--- Data for Name: offers; Type: TABLE DATA; Schema: public; Owner: elyrsjaurycqki
+-- Data for Name: offers; Type: TABLE DATA; Schema: public; Owner: kpkbeykbmtyrom
 --
 
 COPY public.offers (id, label, description, display_phone, display_mail, state, status, owner_id, exchange_address_id, category_id, created_at, updated_at, is_owner_address) FROM stdin;
@@ -411,7 +411,7 @@ COPY public.offers (id, label, description, display_phone, display_mail, state, 
 
 
 --
--- Data for Name: pictures_offer; Type: TABLE DATA; Schema: public; Owner: elyrsjaurycqki
+-- Data for Name: pictures_offer; Type: TABLE DATA; Schema: public; Owner: kpkbeykbmtyrom
 --
 
 COPY public.pictures_offer (id, name, url, offer_id, created_at, updated_at) FROM stdin;
@@ -422,7 +422,7 @@ COPY public.pictures_offer (id, name, url, offer_id, created_at, updated_at) FRO
 
 
 --
--- Data for Name: user_has_favorites; Type: TABLE DATA; Schema: public; Owner: elyrsjaurycqki
+-- Data for Name: user_has_favorites; Type: TABLE DATA; Schema: public; Owner: kpkbeykbmtyrom
 --
 
 COPY public.user_has_favorites (user_id, offer_id, created_at, updated_at) FROM stdin;
@@ -433,7 +433,7 @@ COPY public.user_has_favorites (user_id, offer_id, created_at, updated_at) FROM 
 
 
 --
--- Data for Name: user_want_offers; Type: TABLE DATA; Schema: public; Owner: elyrsjaurycqki
+-- Data for Name: user_want_offers; Type: TABLE DATA; Schema: public; Owner: kpkbeykbmtyrom
 --
 
 COPY public.user_want_offers (user_id, offer_id, validate_by_owner, validate_by_aquirer, created_at, updated_at) FROM stdin;
@@ -446,7 +446,7 @@ COPY public.user_want_offers (user_id, offer_id, validate_by_owner, validate_by_
 
 
 --
--- Data for Name: users; Type: TABLE DATA; Schema: public; Owner: elyrsjaurycqki
+-- Data for Name: users; Type: TABLE DATA; Schema: public; Owner: kpkbeykbmtyrom
 --
 
 COPY public.users (id, first_name, last_name, phone, url_avatar, credit, mail, password_hash, status, note, number_notes, created_at, updated_at, address_id) FROM stdin;
@@ -457,42 +457,42 @@ COPY public.users (id, first_name, last_name, phone, url_avatar, credit, mail, p
 
 
 --
--- Name: addresses_id_seq; Type: SEQUENCE SET; Schema: public; Owner: elyrsjaurycqki
+-- Name: addresses_id_seq; Type: SEQUENCE SET; Schema: public; Owner: kpkbeykbmtyrom
 --
 
 SELECT pg_catalog.setval('public.addresses_id_seq', 5, true);
 
 
 --
--- Name: categories_id_seq; Type: SEQUENCE SET; Schema: public; Owner: elyrsjaurycqki
+-- Name: categories_id_seq; Type: SEQUENCE SET; Schema: public; Owner: kpkbeykbmtyrom
 --
 
 SELECT pg_catalog.setval('public.categories_id_seq', 9, true);
 
 
 --
--- Name: offers_id_seq; Type: SEQUENCE SET; Schema: public; Owner: elyrsjaurycqki
+-- Name: offers_id_seq; Type: SEQUENCE SET; Schema: public; Owner: kpkbeykbmtyrom
 --
 
 SELECT pg_catalog.setval('public.offers_id_seq', 7, true);
 
 
 --
--- Name: pictures_offer_id_seq; Type: SEQUENCE SET; Schema: public; Owner: elyrsjaurycqki
+-- Name: pictures_offer_id_seq; Type: SEQUENCE SET; Schema: public; Owner: kpkbeykbmtyrom
 --
 
 SELECT pg_catalog.setval('public.pictures_offer_id_seq', 3, true);
 
 
 --
--- Name: users_id_seq; Type: SEQUENCE SET; Schema: public; Owner: elyrsjaurycqki
+-- Name: users_id_seq; Type: SEQUENCE SET; Schema: public; Owner: kpkbeykbmtyrom
 --
 
 SELECT pg_catalog.setval('public.users_id_seq', 3, true);
 
 
 --
--- Name: SequelizeMeta SequelizeMeta_pkey; Type: CONSTRAINT; Schema: public; Owner: elyrsjaurycqki
+-- Name: SequelizeMeta SequelizeMeta_pkey; Type: CONSTRAINT; Schema: public; Owner: kpkbeykbmtyrom
 --
 
 ALTER TABLE ONLY public."SequelizeMeta"
@@ -500,7 +500,7 @@ ALTER TABLE ONLY public."SequelizeMeta"
 
 
 --
--- Name: addresses addresses_pkey; Type: CONSTRAINT; Schema: public; Owner: elyrsjaurycqki
+-- Name: addresses addresses_pkey; Type: CONSTRAINT; Schema: public; Owner: kpkbeykbmtyrom
 --
 
 ALTER TABLE ONLY public.addresses
@@ -508,7 +508,7 @@ ALTER TABLE ONLY public.addresses
 
 
 --
--- Name: categories categories_pkey; Type: CONSTRAINT; Schema: public; Owner: elyrsjaurycqki
+-- Name: categories categories_pkey; Type: CONSTRAINT; Schema: public; Owner: kpkbeykbmtyrom
 --
 
 ALTER TABLE ONLY public.categories
@@ -516,7 +516,7 @@ ALTER TABLE ONLY public.categories
 
 
 --
--- Name: offers offers_pkey; Type: CONSTRAINT; Schema: public; Owner: elyrsjaurycqki
+-- Name: offers offers_pkey; Type: CONSTRAINT; Schema: public; Owner: kpkbeykbmtyrom
 --
 
 ALTER TABLE ONLY public.offers
@@ -524,7 +524,7 @@ ALTER TABLE ONLY public.offers
 
 
 --
--- Name: pictures_offer pictures_offer_pkey; Type: CONSTRAINT; Schema: public; Owner: elyrsjaurycqki
+-- Name: pictures_offer pictures_offer_pkey; Type: CONSTRAINT; Schema: public; Owner: kpkbeykbmtyrom
 --
 
 ALTER TABLE ONLY public.pictures_offer
@@ -532,7 +532,7 @@ ALTER TABLE ONLY public.pictures_offer
 
 
 --
--- Name: users users_mail_key; Type: CONSTRAINT; Schema: public; Owner: elyrsjaurycqki
+-- Name: users users_mail_key; Type: CONSTRAINT; Schema: public; Owner: kpkbeykbmtyrom
 --
 
 ALTER TABLE ONLY public.users
@@ -540,7 +540,7 @@ ALTER TABLE ONLY public.users
 
 
 --
--- Name: users users_pkey; Type: CONSTRAINT; Schema: public; Owner: elyrsjaurycqki
+-- Name: users users_pkey; Type: CONSTRAINT; Schema: public; Owner: kpkbeykbmtyrom
 --
 
 ALTER TABLE ONLY public.users
@@ -548,7 +548,7 @@ ALTER TABLE ONLY public.users
 
 
 --
--- Name: offers offers_category_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: elyrsjaurycqki
+-- Name: offers offers_category_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: kpkbeykbmtyrom
 --
 
 ALTER TABLE ONLY public.offers
@@ -556,7 +556,7 @@ ALTER TABLE ONLY public.offers
 
 
 --
--- Name: offers offers_exchange_address_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: elyrsjaurycqki
+-- Name: offers offers_exchange_address_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: kpkbeykbmtyrom
 --
 
 ALTER TABLE ONLY public.offers
@@ -564,7 +564,7 @@ ALTER TABLE ONLY public.offers
 
 
 --
--- Name: offers offers_exchange_address_id_fkey1; Type: FK CONSTRAINT; Schema: public; Owner: elyrsjaurycqki
+-- Name: offers offers_exchange_address_id_fkey1; Type: FK CONSTRAINT; Schema: public; Owner: kpkbeykbmtyrom
 --
 
 ALTER TABLE ONLY public.offers
@@ -572,7 +572,7 @@ ALTER TABLE ONLY public.offers
 
 
 --
--- Name: offers offers_owner_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: elyrsjaurycqki
+-- Name: offers offers_owner_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: kpkbeykbmtyrom
 --
 
 ALTER TABLE ONLY public.offers
@@ -580,7 +580,7 @@ ALTER TABLE ONLY public.offers
 
 
 --
--- Name: pictures_offer pictures_offer_offer_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: elyrsjaurycqki
+-- Name: pictures_offer pictures_offer_offer_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: kpkbeykbmtyrom
 --
 
 ALTER TABLE ONLY public.pictures_offer
@@ -588,7 +588,7 @@ ALTER TABLE ONLY public.pictures_offer
 
 
 --
--- Name: user_has_favorites user_has_favorites_offer_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: elyrsjaurycqki
+-- Name: user_has_favorites user_has_favorites_offer_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: kpkbeykbmtyrom
 --
 
 ALTER TABLE ONLY public.user_has_favorites
@@ -596,7 +596,7 @@ ALTER TABLE ONLY public.user_has_favorites
 
 
 --
--- Name: user_has_favorites user_has_favorites_user_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: elyrsjaurycqki
+-- Name: user_has_favorites user_has_favorites_user_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: kpkbeykbmtyrom
 --
 
 ALTER TABLE ONLY public.user_has_favorites
@@ -604,7 +604,7 @@ ALTER TABLE ONLY public.user_has_favorites
 
 
 --
--- Name: user_want_offers user_want_offers_offer_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: elyrsjaurycqki
+-- Name: user_want_offers user_want_offers_offer_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: kpkbeykbmtyrom
 --
 
 ALTER TABLE ONLY public.user_want_offers
@@ -612,7 +612,7 @@ ALTER TABLE ONLY public.user_want_offers
 
 
 --
--- Name: user_want_offers user_want_offers_user_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: elyrsjaurycqki
+-- Name: user_want_offers user_want_offers_user_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: kpkbeykbmtyrom
 --
 
 ALTER TABLE ONLY public.user_want_offers
@@ -620,7 +620,7 @@ ALTER TABLE ONLY public.user_want_offers
 
 
 --
--- Name: users users_address_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: elyrsjaurycqki
+-- Name: users users_address_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: kpkbeykbmtyrom
 --
 
 ALTER TABLE ONLY public.users
@@ -628,6 +628,6 @@ ALTER TABLE ONLY public.users
 
 
 --
--- elyrsjaurycqkiQL database dump complete
+-- kpkbeykbmtyromQL database dump complete
 --
 
