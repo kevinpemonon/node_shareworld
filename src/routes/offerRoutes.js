@@ -9,6 +9,10 @@ offerRouter.get("/", (req, res) => {
   OfferController.index(req, res);
 });
 
+offerRouter.get("/success", (req, res) => {
+  return res.json("Return offers with success !");
+});
+
 offerRouter.get("/search", (req, res) => {
   OfferController.searchOffers(req, res);
 });
@@ -29,7 +33,9 @@ offerRouter.get("/createdBy/:userId", (req, res) => {
   OfferController.getOffersCreatedByUser(req, res);
 });
 
-offerRouter.put("/update/:offerId", (req, res) => {OfferController.updateOffer(req, res)});
+offerRouter.put("/update/:offerId", (req, res) => {
+  OfferController.updateOffer(req, res);
+});
 
 offerRouter.delete("/:offerId", (req, res) => {
   OfferController.deleteOffer(req, res);
