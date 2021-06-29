@@ -33,7 +33,10 @@ const mySequelize = new Sequelize(
   {
     host: "ec2-108-128-104-50.eu-west-1.compute.amazonaws.com",
     dialect: "postgres",
-    ssl: true,
+    protocol: "postgres",
+    dialectOptions: {
+      ssl: true,
+    },
   }
 );
 
