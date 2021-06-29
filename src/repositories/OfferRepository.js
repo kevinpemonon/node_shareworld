@@ -26,6 +26,15 @@ const sequelize = new Sequelize(
 //   }
 // );
 
+// const mySequelize = new Sequelize(process.env.DATABASE_URL, {
+//   dialectOptions: {
+//     ssl: {
+//       require: true,
+//       rejectUnauthorized: false,
+//     },
+//   },
+// });
+
 const mySequelize = new Sequelize(
   "d1frheou9mvs3a",
   "ljsfdlpndvyaou",
@@ -35,7 +44,10 @@ const mySequelize = new Sequelize(
     dialect: "postgres",
     protocol: "postgres",
     dialectOptions: {
-      ssl: true,
+      ssl: {
+        require: true,
+        rejectUnauthorized: false,
+      },
     },
   }
 );
