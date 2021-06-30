@@ -355,7 +355,6 @@ describe("testing deleteOffer", () => {
 describe("testing getOffersCreatedByUser", () => {
   it("Should return an array of 3 offers", async () => {
     const result = await offerService.serviceGetOffersCreatedByUser(1);
-    console.log(result);
     expect(result.offers.length).toBe(3);
   });
 });

@@ -199,7 +199,6 @@ module.exports = {
   },
 
   async getOffersCreatedByUser(req, res) {
-    console.log("getOffersCreatedByUser");
     const { userId } = req.params;
     if (!userId) {
       let error = "UserId can not be null";
@@ -211,14 +210,11 @@ module.exports = {
       });
     }
     const response = await OfferService.serviceGetOffersCreatedByUser(userId);
-    console.log("controller getOffersCreatedByUser response");
     if (response.offers.length === 0) {
-      console.log("controller getOffersCreatedByUser out");
       return res.status(500).json({
         message: response.message,
       });
     }
-    console.log("controller getOffersCreatedByUser ok");
     return res.status(200).json(response);
   },
 };

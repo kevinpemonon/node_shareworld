@@ -354,7 +354,6 @@ module.exports = {
   },
 
   async serviceGetOffersCreatedByUser(userId) {
-    console.log('serviceGetOffersCreatedByUser');
     const offers = await offerRepository.repositoryGetOffersCreatedByUser(
       userId
     );
